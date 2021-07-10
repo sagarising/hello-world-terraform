@@ -1,0 +1,9 @@
+# Intellij Idea Project file
+.idea
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
