@@ -5,5 +5,5 @@ terraform {
       source  = "hashicorp/aws"
     }
   }
-  required_version = "= 1.2.9"
+  required_version = "= 1.5.0"
 }
