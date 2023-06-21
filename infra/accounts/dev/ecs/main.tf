@@ -113,11 +113,11 @@ resource "aws_ecs_cluster" "cluster" {
 
 resource "aws_ecs_task_definition" "hello" {
   count = var.release_version != "" ? 1 : 0
-  family = "hello"
+  family = "hello-world"
   execution_role_arn = aws_iam_role.ecs_task_execution_role.arn
   container_definitions = jsonencode([
     {
-      name      = "web"
+      name      = "hello-world"
       image     = "${aws_ecr_repository.hello_world.repository_url}:${var.release_version}"
       essential = true
 
@@ -140,7 +140,7 @@ resource "aws_ecs_task_definition" "hello" {
 
 resource "aws_ecs_service" "hello" {
   count = var.release_version != "" ? 1 : 0
-  name            = "hello"
+  name            = "hello-world"
   cluster         = aws_ecs_cluster.cluster.id
   task_definition = aws_ecs_task_definition.hello[0].arn
   desired_count   = 2
