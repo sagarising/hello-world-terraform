@@ -7,3 +7,4 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+node_modules/
