@@ -6,11 +6,11 @@
 
 1. Apply the `remote_state` terraform project. This will create s3 bucket and lock table for keeping remote state for other tf projects.
 ```bash
-cd infra/accounts/dev/remote_state; terraform apply
+cd infra/accounts/dev/remote_state; terraform init; terraform apply
 ```
 2. Apply the `ecs` terraform project.
 ```bash
-cd infra/accounts/dev/ecs; terraform apply
+cd infra/accounts/dev/ecs; terraform init; terraform apply
 ```
 This will output
 * URL to access the web server.
