@@ -36,4 +36,5 @@ cd infra/accounts/dev/ecs; terraform apply -var="release_version=<release_versio
 ```
 
 ## TODO
+- Use EC2 rather than fargate to reduce infra cost
 - Use [terragrunt](https://terragrunt.gruntwork.io/) for making terraform code DRY in case new env is added. 
