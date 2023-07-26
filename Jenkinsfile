@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                docker build -t sagarising/hello-world:v1.0.0 .
+                sh 'docker build -t sagarising/hello-world:v1.0.0 .'
             }
         }
         stage('Test') {
